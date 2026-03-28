@@ -629,10 +629,71 @@ section {
 
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .lgrid { gap: .6rem; }
-  .lcard { width: 100px; padding: 1rem .8rem; }
-  .lbig  { font-size: 2.2rem; }
-  .tbox  { min-width: 70px; padding: 1rem .6rem; }
-  .mcard { padding: 2rem 1.5rem; }
-  nav    { padding: .8rem 1.2rem; }
-}
+
+  /* Nav */
+  nav          { padding: .7rem 1rem; }
+  .nlogo       { font-size: 1.1rem; }
+  .mbtn        { padding: .4rem .9rem; font-size: .78rem; }
+
+  /* Sections — tighter padding, no forced full-height */
+  section {
+    min-height: unset;
+    padding: 5rem 1.1rem 3rem;
+  }
+
+  /* Hero */
+  .badge       { font-size: .72rem; letter-spacing: .12em; padding: .35rem 1rem; margin-bottom: 1.2rem; }
+  .htitle      { font-size: clamp(2rem, 11vw, 3rem); margin-bottom: .9rem; }
+  .htyp        { font-size: 1rem; margin-bottom: 1.2rem; min-height: 1.6rem; }
+  .hhearts     { font-size: 1.6rem; letter-spacing: .3rem; }
+
+  /* Section labels & dividers */
+  .slbl        { font-size: .72rem; margin-bottom: .5rem; }
+  .stitle      { font-size: clamp(1.4rem, 7vw, 2rem); margin-bottom: .6rem; }
+  .sdiv        { margin-bottom: 1.8rem; }
+
+  /* Letter cards — 2 per row, bigger letters */
+  .lgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .7rem;
+    width: 100%;
+    max-width: 340px;
+  }
+  .lcard       { width: 100%; padding: 1.1rem .8rem; }
+  .lbig        { font-size: 2.6rem; }
+  .lmsg        { font-size: .82rem; }
+  .lexp        { font-size: .78rem; }
+
+  /* About grid — 2 columns */
+  .agrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .8rem;
+  }
+  .acard       { padding: 1.2rem 1rem; }
+  .aemo        { font-size: 2rem; margin-bottom: .5rem; }
+  .atxt        { font-size: .9rem; }
+
+  /* Countdown — 3 per row */
+  .tgrid       { gap: .6rem; margin-top: 1.2rem; }
+  .tbox        { min-width: 0; width: calc(33.33% - .5rem); padding: .9rem .4rem; border-radius: 14px; }
+  .tnum        { font-size: clamp(1.4rem, 7vw, 2rem); }
+  .tlbl        { font-size: .6rem; letter-spacing: .08em; margin-top: .3rem; }
+  .csub        { font-size: .9rem; margin-top: 1rem; }
+
+  /* Message card */
+  .mcard       { padding: 1.8rem 1.2rem; border-radius: 18px; }
+  .mquo        { font-size: 2.8rem; margin-bottom: .5rem; }
+  .mtxt        { font-size: 1rem; line-height: 1.8; min-height: unset; }
+  .msig        { font-size: 1.2rem; margin-top: 1.2rem; }
+
+  /* Surprise button */
+  #sbtn        { bottom: 1rem; right: 1rem; padding: .6rem 1.1rem; font-size: .8rem; }
+
+  /* Surprise modal */
+  .sinn        { padding: 2rem 1.4rem; }
+  .semo        { font-size: 3rem; }
+  .stitl       { font-size: 1.2rem; }
+  .stxt        { font-size: .95rem; }
+  }
+  
