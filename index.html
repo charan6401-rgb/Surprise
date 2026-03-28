@@ -5,196 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Anusha 🎂</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#06030f;--purple:#7c3aed;--pink:#ec4899;--rose:#f43f5e;--gold:#f59e0b;--gp:rgba(124,58,237,.4);--gk:rgba(236,72,153,.4)}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:#fff;font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none}
-#cursor{position:fixed;width:18px;height:18px;border-radius:50%;pointer-events:none;z-index:9999;background:radial-gradient(circle,rgba(236,72,153,.9),rgba(124,58,237,.5));box-shadow:0 0 20px rgba(236,72,153,.8);transform:translate(-50%,-50%)}
-#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.aorb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.12;animation:am 12s ease-in-out infinite alternate}
-.aorb:nth-child(1){width:600px;height:600px;background:var(--purple);top:-200px;left:-200px}
-.aorb:nth-child(2){width:500px;height:500px;background:var(--pink);bottom:-150px;right:-150px;animation-delay:-4s}
-.aorb:nth-child(3){width:400px;height:400px;background:var(--rose);top:40%;left:50%;animation-delay:-8s}
-@keyframes am{0%{transform:translate(0,0) scale(1)}100%{transform:translate(60px,40px) scale(1.1)}}
-
-/* LOCK */
-#lock{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 40%,#1a0533 0%,#06030f 70%);transition:opacity .7s ease,transform .7s ease}
-#lock.out{opacity:0;transform:scale(1.08);pointer-events:none}
-.lico{font-size:4rem;margin-bottom:1.5rem;animation:fl 3s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(236,72,153,.7))}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.ltitle{font-family:'Cinzel',serif;font-size:clamp(1.4rem,5vw,2.2rem);letter-spacing:.25em;text-shadow:0 0 30px var(--gk);margin-bottom:.5rem}
-.lsub{font-size:1rem;color:rgba(255,255,255,.45);letter-spacing:.15em;margin-bottom:2.5rem;font-style:italic}
-.linp{background:rgba(255,255,255,.06);border:1px solid rgba(236,72,153,.35);border-radius:50px;padding:.9rem 2rem;font-size:1.4rem;letter-spacing:.5em;color:#fff;width:280px;text-align:center;outline:none;backdrop-filter:blur(10px);transition:border .3s,box-shadow .3s;font-family:'Cinzel',serif;display:block;margin-bottom:1.2rem}
-.linp:focus{border-color:var(--pink);box-shadow:0 0 25px var(--gk)}
-.linp::placeholder{color:rgba(255,255,255,.3);letter-spacing:.1em;font-size:1rem}
-.lbtn{padding:.9rem 3rem;background:linear-gradient(135deg,var(--purple),var(--pink));border:none;border-radius:50px;color:#fff;font-size:1rem;letter-spacing:.2em;font-family:'Cinzel',serif;cursor:pointer;box-shadow:0 0 30px var(--gk);transition:transform .2s,box-shadow .2s;width:280px}
-.lbtn:hover,.lbtn:active{transform:scale(1.05);box-shadow:0 0 50px var(--gk)}
-.lerr{color:var(--rose);font-size:.9rem;letter-spacing:.1em;opacity:0;margin-top:1rem;text-align:center;transition:opacity .3s;font-style:italic;min-height:1.4rem}
-.lerr.show{opacity:1}
-@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-8px)}80%{transform:translateX(8px)}}
-.shake{animation:shake .5s ease}
-
-/* MAIN */
-#main{position:relative;z-index:1;display:none}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(6,3,15,.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(124,58,237,.2)}
-.nlogo{font-family:'Dancing Script',cursive;font-size:1.5rem;background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.mbtn{background:rgba(255,255,255,.08);border:1px solid rgba(236,72,153,.3);border-radius:50px;padding:.5rem 1.2rem;color:#fff;font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:.5rem;font-family:'Cormorant Garamond',serif;letter-spacing:.05em;transition:background .3s}
-.mbtn:hover{background:rgba(236,72,153,.15)}
-.mico{animation:spin 3s linear infinite}
-.mico.paused{animation-play-state:paused}
-@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-
-section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 1.5rem 4rem;position:relative}
-#hero{text-align:center;background:radial-gradient(ellipse at 50% 30%,rgba(124,58,237,.15) 0%,transparent 65%)}
-.badge{display:inline-block;padding:.4rem 1.5rem;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);border-radius:50px;font-size:.85rem;letter-spacing:.2em;color:var(--pink);margin-bottom:2rem;animation:fid .8s ease both}
-.htitle{font-family:'Cinzel',serif;font-size:clamp(2.5rem,8vw,6rem);line-height:1.1;background:linear-gradient(135deg,#fff 0%,var(--pink) 50%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:fid .8s ease .2s both;margin-bottom:1.2rem}
-.hname{display:block;filter:drop-shadow(0 0 40px rgba(236,72,153,.6))}
-.htyp{font-size:clamp(1rem,3vw,1.5rem);color:rgba(255,255,255,.7);font-style:italic;min-height:2rem;margin-bottom:2rem;animation:fid .8s ease .4s both}
-.tcur{animation:blink .8s step-end infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.hhearts{font-size:2rem;letter-spacing:.5rem;animation:fid .8s ease .6s both}
-.hf{display:inline-block;animation:hfl 2s ease-in-out infinite}
-.hf:nth-child(2){animation-delay:.3s}.hf:nth-child(3){animation-delay:.6s}
-@keyframes hfl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes fid{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-
-.slbl{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.3em;color:var(--pink);margin-bottom:.8rem;text-transform:uppercase}
-.stitle{font-family:'Cinzel',serif;font-size:clamp(1.8rem,5vw,3rem);margin-bottom:1rem;text-align:center;background:linear-gradient(135deg,#fff,rgba(255,255,255,.6));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sdiv{width:60px;height:2px;background:linear-gradient(90deg,var(--purple),var(--pink));margin:0 auto 3rem;border-radius:2px}
-
-/* LETTERS */
-#letters{background:radial-gradient(ellipse at 80% 50%,rgba(124,58,237,.1) 0%,transparent 60%)}
-.lgrid{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;max-width:900px}
-.lcard{background:rgba(255,255,255,.04);border:1px solid rgba(236,72,153,.2);border-radius:16px;padding:1.5rem 1.2rem;width:130px;text-align:center;cursor:pointer;backdrop-filter:blur(10px);transition:transform .3s,box-shadow .3s,background .3s;opacity:0;transform:translateY(30px)}
-.lcard.vis{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease,box-shadow .3s,background .3s}
-.lcard:hover,.lcard.act{background:rgba(124,58,237,.15);box-shadow:0 0 30px var(--gp);transform:translateY(-6px) scale(1.03);border-color:rgba(124,58,237,.5)}
-.lbig{font-family:'Cinzel',serif;font-size:3rem;font-weight:700;background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:.5rem}
-.lmsg{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.5;font-style:italic}
-.lexp{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:.8rem;color:rgba(255,255,255,.55);margin-top:.5rem}
-.lcard.act .lexp{max-height:100px}
-
-/* ABOUT */
-#about{background:radial-gradient(ellipse at 20% 60%,rgba(244,63,94,.08) 0%,transparent 55%)}
-.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;max-width:800px;width:100%}
-.acard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.8rem 1.5rem;text-align:center;backdrop-filter:blur(12px);transition:transform .3s,box-shadow .3s;opacity:0;transform:scale(.9)}
-.acard.vis{opacity:1;transform:scale(1);transition:opacity .6s ease,transform .6s ease,box-shadow .3s}
-.acard:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 20px var(--gk)}
-.aemo{font-size:2.5rem;margin-bottom:.8rem}
-.atxt{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.6;font-style:italic}
-
-/* COUNTDOWN */
-#countdown{background:radial-gradient(ellipse at 50% 50%,rgba(124,58,237,.12) 0%,transparent 65%)}
-.tgrid{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
-.tbox{background:rgba(255,255,255,.05);border:1px solid rgba(124,58,237,.3);border-radius:20px;padding:1.5rem 1.2rem;min-width:95px;text-align:center;backdrop-filter:blur(10px)}
-.tnum{font-family:'Cinzel',serif;font-size:clamp(2rem,6vw,3.5rem);background:linear-gradient(135deg,#fff,var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;line-height:1}
-.tlbl{font-size:.75rem;letter-spacing:.15em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-top:.5rem;display:block}
-.csub{font-size:1.1rem;color:rgba(255,255,255,.5);font-style:italic;margin-top:1.5rem;text-align:center}
-
-/* MESSAGE */
-#message{background:radial-gradient(ellipse at 50% 40%,rgba(244,63,94,.1) 0%,transparent 60%)}
-.mcard{max-width:680px;background:rgba(255,255,255,.04);border:1px solid rgba(236,72,153,.2);border-radius:24px;padding:3rem 2.5rem;text-align:center;backdrop-filter:blur(16px);box-shadow:0 0 60px rgba(236,72,153,.06),0 30px 60px rgba(0,0,0,.4);position:relative;overflow:hidden}
-.mcard::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent 0%,rgba(236,72,153,.03) 50%,transparent 100%);animation:rb 8s linear infinite}
-@keyframes rb{to{transform:rotate(360deg)}}
-.mquo{font-size:4rem;color:rgba(236,72,153,.2);line-height:1;margin-bottom:1rem}
-.mtxt{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.9;color:rgba(255,255,255,.8);font-style:italic;min-height:8rem;position:relative;z-index:1;white-space:pre-line}
-.msig{margin-top:2rem;font-family:'Dancing Script',cursive;font-size:1.5rem;background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative;z-index:1}
-
-/* FLOATING HEARTS */
-.fheart{position:fixed;pointer-events:none;z-index:0;animation:fup linear infinite;opacity:0}
-@keyframes fup{0%{transform:translateY(100vh) rotate(0deg);opacity:.7}100%{transform:translateY(-100px) rotate(360deg);opacity:0}}
-
-/* CONFETTI */
-.cpiece{position:fixed;pointer-events:none;z-index:999;border-radius:2px;animation:cf linear forwards}
-@keyframes cf{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
-
-/* SURPRISE */
-#sbtn{position:fixed;bottom:2rem;right:2rem;z-index:200;background:linear-gradient(135deg,var(--gold),var(--rose));border:none;border-radius:50px;padding:.8rem 1.5rem;color:#fff;font-size:.9rem;letter-spacing:.1em;cursor:pointer;font-family:'Cinzel',serif;display:none;animation:sp 1.5s ease-in-out infinite,si .5s ease both}
-@keyframes sp{0%,100%{box-shadow:0 0 20px rgba(245,158,11,.5)}50%{box-shadow:0 0 50px rgba(245,158,11,.8),0 0 80px rgba(244,63,94,.4)}}
-@keyframes si{from{transform:translateX(120px);opacity:0}to{transform:translateX(0);opacity:1}}
-#smod{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);backdrop-filter:blur(10px)}
-#smod.show{display:flex}
-.sinn{background:linear-gradient(135deg,rgba(30,10,60,.95),rgba(15,5,30,.95));border:1px solid rgba(245,158,11,.3);border-radius:24px;padding:3rem 2rem;max-width:480px;width:90%;text-align:center;box-shadow:0 0 80px rgba(245,158,11,.2);animation:pi .4s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes pi{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
-.semo{font-size:4rem;margin-bottom:1rem;animation:wig 1s ease-in-out infinite}
-@keyframes wig{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
-.stitl{font-family:'Cinzel',serif;font-size:1.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--gold),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.stxt{font-size:1.05rem;color:rgba(255,255,255,.8);line-height:1.7;font-style:italic;margin-bottom:2rem}
-.scls{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50px;padding:.6rem 2rem;color:#fff;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1rem}
-
-.rev{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
-.rev.vis{opacity:1;transform:translateY(0)}
-
-@media(max-width:600px){
-  .lgrid{gap:.6rem}
-  .lcard{width:100px;padding:1rem .8rem}
-  .lbig{font-size:2.2rem}
-  .tbox{min-width:70px;padding:1rem .6rem}
-  .mcard{padding:2rem 1.5rem}
-  nav{padding:.8rem 1.2rem}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="cursor"></div>
 <canvas id="particles"></canvas>
-<div class="aurora"><div class="aorb"></div><div class="aorb"></div><div class="aorb"></div></div>
+<div class="aurora">
+  <div class="aorb"></div>
+  <div class="aorb"></div>
+  <div class="aorb"></div>
+</div>
 
-<!-- LOCK SCREEN -->
+<!-- ── LOCK SCREEN ── -->
 <div id="lock">
   <div class="lico">🔐</div>
   <h1 class="ltitle">SOMETHING SPECIAL</h1>
   <p class="lsub">enter the secret key to unlock</p>
-  <input class="linp" type="password" id="pwd" maxlength="10" placeholder="••••••" autocomplete="off">
+  <input class="linp" type="password" id="pwd" maxlength="20" placeholder="••••••" autocomplete="off">
   <button class="lbtn" id="unlockBtn">✦ Unlock ✦</button>
   <p class="lerr" id="lerr">✗ Wrong key. Try again.</p>
 </div>
 
-<!-- MAIN SITE -->
+<!-- ── MAIN SITE ── -->
 <div id="main">
+
   <nav>
     <span class="nlogo">Happy Birthday ✨</span>
     <button class="mbtn" id="mbtn" onclick="toggleMusic()">
-      <span class="mico paused" id="mico">♫</span>
-      <span id="mlbl">Music Off</span>
+      <span class="mico" id="mico">♫</span>
+      <span id="mlbl">Music On</span>
     </button>
   </nav>
 
+  <!-- HERO -->
   <section id="hero">
     <div class="badge">✦ March 28, 2009 · A Star Was Born ✦</div>
-    <h1 class="htitle">Happy Birthday<span class="hname">Anusha ❤️</span></h1>
+    <h1 class="htitle">
+      Happy Birthday
+      <span class="hname">Anusha ❤️</span>
+    </h1>
     <p class="htyp"><span id="typed"></span><span class="tcur">|</span></p>
-    <div class="hhearts"><span class="hf">💜</span><span class="hf">🌸</span><span class="hf">💗</span></div>
+    <div class="hhearts">
+      <span class="hf">💜</span>
+      <span class="hf">🌸</span>
+      <span class="hf">💗</span>
+    </div>
   </section>
 
+  <!-- LETTERS -->
   <section id="letters">
     <p class="slbl rev">A Name That Says It All</p>
     <h2 class="stitle rev">A · N · U · S · H · A</h2>
     <div class="sdiv rev"></div>
     <div class="lgrid">
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">A</span><p class="lmsg">Adorable in every way</p><p class="lexp">From the way you laugh to the way you care — genuinely adorable in everything you do.</p></div>
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">N</span><p class="lmsg">Never failing to make me smile</p><p class="lexp">Even on the hardest days, you have this magical way of making everything feel lighter.</p></div>
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">U</span><p class="lmsg">Unstoppable and unique</p><p class="lexp">There's no one quite like you. Your energy, your vibe — completely one of a kind.</p></div>
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">S</span><p class="lmsg">Stronger than you think</p><p class="lexp">You carry so much with such grace. Far stronger than you ever give yourself credit for.</p></div>
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">H</span><p class="lmsg">Heart full of kindness</p><p class="lexp">Your warmth is contagious. People feel genuinely lucky to have you in their lives.</p></div>
-      <div class="lcard" onclick="toggleL(this)"><span class="lbig">A</span><p class="lmsg">Always amazing</p><p class="lexp">Not just today — every single day. You show up amazing, and that never goes unnoticed.</p></div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">A</span>
+        <p class="lmsg">Adorable in every way</p>
+        <p class="lexp">From the way you laugh to the way you care — genuinely adorable in everything you do.</p>
+      </div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">N</span>
+        <p class="lmsg">Never failing to make me smile</p>
+        <p class="lexp">Even on the hardest days, you have this magical way of making everything feel lighter.</p>
+      </div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">U</span>
+        <p class="lmsg">Unstoppable and unique</p>
+        <p class="lexp">There's no one quite like you. Your energy, your vibe — completely one of a kind.</p>
+      </div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">S</span>
+        <p class="lmsg">Stronger than you think</p>
+        <p class="lexp">You carry so much with such grace. Far stronger than you ever give yourself credit for.</p>
+      </div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">H</span>
+        <p class="lmsg">Heart full of kindness</p>
+        <p class="lexp">Your warmth is contagious. People feel genuinely lucky to have you in their lives.</p>
+      </div>
+      <div class="lcard" onclick="toggleL(this)">
+        <span class="lbig">A</span>
+        <p class="lmsg">Always amazing</p>
+        <p class="lexp">Not just today — every single day. You show up amazing, and that never goes unnoticed.</p>
+      </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <p class="slbl rev">A Few True Things</p>
     <h2 class="stitle rev">About You</h2>
     <div class="sdiv rev"></div>
     <div class="agrid">
-      <div class="acard"><div class="aemo">♈</div><p class="atxt">Aries energy — bold, passionate, and never boring</p></div>
-      <div class="acard"><div class="aemo">✨</div><p class="atxt">You light up every room without even trying</p></div>
-      <div class="acard"><div class="aemo">💭</div><p class="atxt">Deeper thoughts than you ever let on</p></div>
-      <div class="acard"><div class="aemo">🌙</div><p class="atxt">You feel things deeply — and that's your superpower</p></div>
+      <div class="acard">
+        <div class="aemo">♈</div>
+        <p class="atxt">Aries energy — bold, passionate, and never boring</p>
+      </div>
+      <div class="acard">
+        <div class="aemo">✨</div>
+        <p class="atxt">You light up every room without even trying</p>
+      </div>
+      <div class="acard">
+        <div class="aemo">💭</div>
+        <p class="atxt">Deeper thoughts than you ever let on</p>
+      </div>
+      <div class="acard">
+        <div class="aemo">🌙</div>
+        <p class="atxt">You feel things deeply — and that's your superpower</p>
+      </div>
     </div>
   </section>
 
+  <!-- COUNTDOWN -->
   <section id="countdown">
     <p class="slbl rev">Time Is A Gift</p>
     <h2 class="stitle rev">You've Been Alive For</h2>
@@ -210,6 +133,7 @@ section{min-height:100vh;display:flex;flex-direction:column;align-items:center;j
     <p class="csub rev">…every second has been worth celebrating 🎂</p>
   </section>
 
+  <!-- MESSAGE -->
   <section id="message">
     <p class="slbl rev">From the Heart</p>
     <h2 class="stitle rev">A Little Note</h2>
@@ -220,10 +144,37 @@ section{min-height:100vh;display:flex;flex-direction:column;align-items:center;j
       <p class="msig" id="msig" style="opacity:0">— Made by ur friend 💜</p>
     </div>
   </section>
+
+</div><!-- /main -->
+
+<!-- SURPRISE BUTTON -->
+<button id="sbtn" onclick="showS()">🌟 Surprise!</button>
+
+<!-- SURPRISE MODAL -->
+<div id="smod">
+  <div class="sinn">
+    <div class="semo">🎁</div>
+    <h3 class="stitl">A Hidden Message</h3>
+    <p class="stxt">
+      You found the secret!<br><br>
+      You know what's rare? Someone who is genuinely themselves — no filter, no pretence.
+      That's you, Anusha. You don't need to be anything other than exactly who you are.<br><br>
+      Keep being that person. The world is better with you in it. 🌸
+    </p>
+    <button class="scls" onclick="closeS()">✦ Close ✦</button>
+  </div>
 </div>
 
-<button id="sbtn" onclick="showS()">🌟 Surprise!</button>
-<div id="smod"><div class="sinn"><div class="semo">🎁</div><h3 class="stitl">A Hidden Message</h3><p class="stxt">You found the secret!<br><br>You know what's rare? Someone who is genuinely themselves — no filter, no pretence. That's you, Anusha. You don't need to be anything other than exactly who you are.<br><br>Keep being that person. The world is better with you in it. 🌸</p><button class="scls" onclick="closeS()">✦ Close ✦</button></div></div>
+<!--
+  ── MUSIC ──────────────────────────────────────────────────────
+  Replace the src below with your own .mp3 file placed in the
+  same folder, e.g.:  src="music.mp3"
+  Music will autoplay as soon as the password is entered.
+  ──────────────────────────────────────────────────────────────
+-->
+<audio id="aud" loop src="music.mp3"></audio>
 
-<audio id="aud" loop></audio>
-<textarea id="adata" style="display:none">SUQzAwAAAAA2c1RYWFgAAAAYAAAAV09BUgBodHRwOi8vbWR1bmRvLmNvbQBUSVQyAAAAIgAAAGdvbGRlbiBob3VyIChwaWFubyBpbnN0cnVtZW50YWwpAFRQRTEAAAAFAAAAc2t5AFRBTEIAAAAFAAAAU2t5AFRYWFgAAAAmAAAAY29tbWVudABHZXQgbW9yZSBtdXNpYyBvbiBNZHVuZG8uY29tAFRQVUIAAAAMAAAATWR1bmRvLmNvbQBUQ09QAAAADAAAAE1kdW5kby5jb20AVEVOQwAAAAwAAABNZHVuZG8uY29tAFRTU0UAAAAPAAAATGF2ZjU4LjI5LjEwMABBUElDAAAaaAAAAGltYWdlL3BuZwAAAIlQTkcNChoKAAAADUlIRFIAAADIAAAAyAgGAAAArViungAAAAlwSFlzAAAOxAAADsQA4iw+jQAAEABJREFUeJztnQm0X0V9x1+IhH+lgmBbqqKtoiDHuoPallPbUmktbZWlUCsVi2gRj8JRFKqAVpSlgICE5L285CWPLITsGyEh+0pWskPIvpAFQhIgENb/TOf7m5l779x7//P+7+Vx3kvP957zOXn87517Z/vO8pvfDA3qwd/ThJByGro6AoR0ZygQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKBAiEkAgVCSAQKhJAIFAghESgQQiJQIIREoEAIiUCBEBKhkwRSydD1iSKks+gEgVR0taVBV/sbBvbUR41IENfW47o+Hh0B8Za87gZx+X/OEQrEiKO5QatZl2q17j6txpwpQunqRLVFtY8R89iPWWEP6P7xDeLuG6NxH5d0qNajpEE6SjkCgRhxDDxGq4mf19lLjfywFGJXJ6wW1QcatH59fxrfR/6iW8c3iDvy2zRCyVV9Q1f7UiRvJx0UiJ1voPXVS3+q85e0yoOO7fLE5REhTPm7MLIH1+lq01EikH4mv5+ZHMZ//rePul7waKIDAsnMOQa9Q1d7m0J75Zmw0F7ZJb93deLK4q1nXBDG9dA2XW3sbnEtRwSya1oY/4Xfo0DeRtopEDfnMJVMPXm/VsPfL4UjIqm+niu4q7rZfMQL5KthPF/a7ATS/YcpViBTw/gvuIoCeRtph0Aw5+hhxux/GZSPGvYeW0DDTi4OtWR83F0sRRQIaT91CsTNOUyPoFf9piiE3zXYwnv
+<script src="script.js"></script>
+</body>
+      </html>
+          
