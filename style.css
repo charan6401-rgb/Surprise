@@ -631,69 +631,79 @@ section {
 @media (max-width: 600px) {
 
   /* Nav */
-  nav          { padding: .7rem 1rem; }
-  .nlogo       { font-size: 1.1rem; }
-  .mbtn        { padding: .4rem .9rem; font-size: .78rem; }
+  nav     { padding: .65rem 1rem; }
+  .nlogo  { font-size: 1rem; }
+  .mbtn   { padding: .35rem .85rem; font-size: .75rem; }
 
-  /* Sections — tighter padding, no forced full-height */
+  /* ALL sections — kill forced full height, tight padding */
   section {
-    min-height: unset;
-    padding: 5rem 1.1rem 3rem;
+    min-height: unset !important;
+    padding: 4.5rem 1rem 2.5rem !important;
+    justify-content: flex-start;
   }
 
   /* Hero */
-  .badge       { font-size: .72rem; letter-spacing: .12em; padding: .35rem 1rem; margin-bottom: 1.2rem; }
-  .htitle      { font-size: clamp(2rem, 11vw, 3rem); margin-bottom: .9rem; }
-  .htyp        { font-size: 1rem; margin-bottom: 1.2rem; min-height: 1.6rem; }
-  .hhearts     { font-size: 1.6rem; letter-spacing: .3rem; }
+  #hero           { padding-top: 5rem !important; padding-bottom: 2rem !important; }
+  .badge          { font-size: .7rem; letter-spacing: .1em; padding: .3rem .9rem; margin-bottom: 1rem; }
+  .htitle         { font-size: clamp(1.9rem, 10vw, 2.8rem); margin-bottom: .7rem; line-height: 1.15; }
+  .htyp           { font-size: .95rem; margin-bottom: 1rem; min-height: 1.4rem; }
+  .hhearts        { font-size: 1.5rem; letter-spacing: .25rem; }
 
-  /* Section labels & dividers */
-  .slbl        { font-size: .72rem; margin-bottom: .5rem; }
-  .stitle      { font-size: clamp(1.4rem, 7vw, 2rem); margin-bottom: .6rem; }
-  .sdiv        { margin-bottom: 1.8rem; }
+  /* Section labels */
+  .slbl           { font-size: .68rem; letter-spacing: .22em; margin-bottom: .4rem; }
+  .stitle         { font-size: clamp(1.3rem, 6.5vw, 1.9rem); margin-bottom: .5rem; }
+  .sdiv           { margin-bottom: 1.4rem; }
 
-  /* Letter cards — 2 per row, bigger letters */
+  /* LETTERS — 3 per row so all 6 sit in 2 clean rows */
+  #letters        { padding-bottom: 2rem !important; }
   .lgrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .7rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .55rem;
     width: 100%;
-    max-width: 340px;
+    max-width: 100%;
   }
-  .lcard       { width: 100%; padding: 1.1rem .8rem; }
-  .lbig        { font-size: 2.6rem; }
-  .lmsg        { font-size: .82rem; }
-  .lexp        { font-size: .78rem; }
+  .lcard          { width: 100%; padding: .9rem .5rem; border-radius: 12px; }
+  .lbig           { font-size: 2.4rem; margin-bottom: .3rem; }
+  .lmsg           { font-size: .78rem; line-height: 1.4; }
+  .lexp           { font-size: .72rem; }
+  .lcard.act .lexp { max-height: 150px; }
 
-  /* About grid — 2 columns */
+  /* ABOUT — 2 columns, compact */
+  #about          { padding-bottom: 2rem !important; }
   .agrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: .8rem;
+    gap: .7rem;
   }
-  .acard       { padding: 1.2rem 1rem; }
-  .aemo        { font-size: 2rem; margin-bottom: .5rem; }
-  .atxt        { font-size: .9rem; }
+  .acard          { padding: 1rem .9rem; border-radius: 14px; }
+  .aemo           { font-size: 1.9rem; margin-bottom: .4rem; }
+  .atxt           { font-size: .88rem; line-height: 1.5; }
 
-  /* Countdown — 3 per row */
-  .tgrid       { gap: .6rem; margin-top: 1.2rem; }
-  .tbox        { min-width: 0; width: calc(33.33% - .5rem); padding: .9rem .4rem; border-radius: 14px; }
-  .tnum        { font-size: clamp(1.4rem, 7vw, 2rem); }
-  .tlbl        { font-size: .6rem; letter-spacing: .08em; margin-top: .3rem; }
-  .csub        { font-size: .9rem; margin-top: 1rem; }
+  /* COUNTDOWN — 3 per row, all 6 in 2 tight rows */
+  #countdown      { padding-bottom: 2rem !important; }
+  .tgrid          { gap: .5rem; margin-top: .9rem; width: 100%; }
+  .tbox {
+    flex: 0 0 calc(33.333% - .4rem);
+    min-width: 0;
+    padding: .75rem .3rem;
+    border-radius: 12px;
+  }
+  .tnum           { font-size: clamp(1.5rem, 8vw, 2.2rem); }
+  .tlbl           { font-size: .58rem; letter-spacing: .07em; margin-top: .25rem; }
+  .csub           { font-size: .85rem; margin-top: .9rem; padding: 0 .5rem; }
 
-  /* Message card */
-  .mcard       { padding: 1.8rem 1.2rem; border-radius: 18px; }
-  .mquo        { font-size: 2.8rem; margin-bottom: .5rem; }
-  .mtxt        { font-size: 1rem; line-height: 1.8; min-height: unset; }
-  .msig        { font-size: 1.2rem; margin-top: 1.2rem; }
+  /* MESSAGE */
+  #message        { padding-bottom: 3rem !important; }
+  .mcard          { padding: 1.5rem 1.1rem; border-radius: 16px; }
+  .mquo           { font-size: 2.4rem; margin-bottom: .4rem; }
+  .mtxt           { font-size: .98rem; line-height: 1.75; min-height: unset; }
+  .msig           { font-size: 1.1rem; margin-top: 1rem; }
 
-  /* Surprise button */
-  #sbtn        { bottom: 1rem; right: 1rem; padding: .6rem 1.1rem; font-size: .8rem; }
-
-  /* Surprise modal */
-  .sinn        { padding: 2rem 1.4rem; }
-  .semo        { font-size: 3rem; }
-  .stitl       { font-size: 1.2rem; }
-  .stxt        { font-size: .95rem; }
+  /* Surprise */
+  #sbtn           { bottom: .8rem; right: .8rem; padding: .55rem 1rem; font-size: .78rem; }
+  .sinn           { padding: 1.8rem 1.2rem; }
+  .semo           { font-size: 2.8rem; }
+  .stitl          { font-size: 1.15rem; }
+  .stxt           { font-size: .92rem; line-height: 1.6; }
   }
   
